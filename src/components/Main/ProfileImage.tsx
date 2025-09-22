@@ -1,8 +1,12 @@
 import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
-import { StaticImage } from 'gatsby-plugin-image'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
-const ProfileImageWrapper = styled.div`
+type ProfileImageProps = {
+  profileImage: IGatsbyImageData
+}
+
+const ProfileImageWrapper = styled(GatsbyImage)`
   width: 120px;
   height: 120px;
   margin-bottom: 30px;
@@ -15,20 +19,10 @@ const ProfileImageWrapper = styled.div`
   }
 `
 
-const ProfileImage: FunctionComponent = function () {
-  return (
-    <ProfileImageWrapper>
-      <StaticImage
-        src="../../images/profile.jpg"
-        alt="Profile Image"
-        width={120}
-        height={120}
-        placeholder="blurred"
-        layout="constrained"
-        style={{ borderRadius: '50%' }}
-      />
-    </ProfileImageWrapper>
-  )
+const ProfileImage: FunctionComponent<ProfileImageProps> = function ({
+  profileImage,
+}) {
+  return <ProfileImageWrapper image={profileImage} alt="Profile Image" />
 }
 
 export default ProfileImage

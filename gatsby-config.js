@@ -28,7 +28,16 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: ['auto', 'sharp'],
+          quality: 100,
+          placeholder: 'blurred'
+        }
+      }
+    }
     `gatsby-plugin-emotion`,
     `gatsby-plugin-image`,
     {
