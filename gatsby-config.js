@@ -32,12 +32,12 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          formats: ['auto', 'sharp'],
+          formats: ['auto', 'webp'],
           quality: 100,
           placeholder: 'blurred'
         }
       }
-    }
+    },
     `gatsby-plugin-emotion`,
     `gatsby-plugin-image`,
     {
