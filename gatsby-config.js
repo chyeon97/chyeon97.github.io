@@ -3,6 +3,7 @@ module.exports = {
     title: `Developer Life`,
     description: `개발자로서 배움을 기록하는 습관`,
     author: `@ParkChaeYeon`,
+    siteUrl: 'https://my-website-link.com',
   },
   plugins: [
     {
@@ -75,6 +76,20 @@ module.exports = {
               rel: 'nofollow',
             },
           },
+          {
+            resolve: 'gatsby-plugin-canonical-urls',
+            options: {
+              siteUrl: 'https://my-website.com',
+              stripQueryString: true,
+            }
+          },
+          'gatsby-plugin-sitemap',
+          {
+            resolve: 'gatsby-plugin-robots-txt',
+            options: {
+              policy: [{userAgent: '*', allow: '/'}]
+            }
+          }
         ]
       }
     }
