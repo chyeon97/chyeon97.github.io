@@ -3,7 +3,7 @@ module.exports = {
     title: `Developer Life`,
     description: `개발자로서 배움을 기록하는 습관`,
     author: `@ParkChaeYeon`,
-    siteUrl: 'https://chyeon97.github.io/devlog/',
+    siteUrl: 'https://chyeon97.github.io',
   },
   plugins: [
     {
@@ -79,7 +79,7 @@ module.exports = {
           {
             resolve: 'gatsby-plugin-canonical-urls',
             options: {
-              siteUrl: 'https://chyeon97.github.io/devlog/',
+              siteUrl: 'https://chyeon97.github.io',
               stripQueryString: true,
             }
           },
