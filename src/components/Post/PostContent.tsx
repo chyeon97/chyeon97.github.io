@@ -8,12 +8,12 @@ interface PostContentProps {
 const MarkdownRenderer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 768px;
+  width: 800px;
   margin: 0 auto;
-  padding: 100px; 0;
+  padding: 25px; 0;
   word-break: break-all;
   
-  line-height: 1.8;
+  line-height: 1.5;
   font-size: 16px;
   font-weight: 400;
   
